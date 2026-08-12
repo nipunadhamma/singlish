@@ -41,9 +41,24 @@
       "robots.txt",
       "sitemap.xml",
       "fonts/**/*",
-      "image/**/*"
+      "!fonts/FM-Arjunn.TTF",
+      "image/**/*",
+      "!image/hero.jpg",
+      "!image/logo-800x800.png",
+      "!image/og-500x500 .png",
+      "!image/icon-192.png",
+      "!image/icon-512.png",
+      "!image/ios.png",
+      "!image/android2.png",
+      "!image/windows.png",
+      "!image/linux.png",
+      "!image/macos2.png"
     ],
     "asar": true,
+    "compression": "maximum",
+    "electronLanguages": [
+      "en-US"
+    ],
     "win": {
       "icon": "image/logo-800x800.png",
       "target": ["nsis", "portable"]
