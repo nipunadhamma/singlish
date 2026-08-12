@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://singlish.nipunadhamma.org/sitemap.xml
