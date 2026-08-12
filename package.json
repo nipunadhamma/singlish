@@ -1,0 +1,73 @@
+{
+  "name": "nipunadhamma-singlish",
+  "productName": "Nipunadhamma Singlish",
+  "version": "1.0.0",
+  "description": "Singlish → සිංහල — type Singlish, see Sinhala live. Offline Singlish keyboard with 16+ bundled Sinhala fonts.",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "smoke": "cross-env SMOKE=1 electron .",
+    "dist": "electron-builder --win --mac",
+    "dist:win": "electron-builder --win",
+    "dist:mac": "electron-builder --mac",
+    "dist:linux": "electron-builder --linux"
+  },
+  "author": "Nipunadhamma",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "electron": "latest",
+    "electron-builder": "latest"
+  },
+  "build": {
+    "appId": "org.nipunadhamma.singlish",
+    "productName": "Nipunadhamma Singlish",
+    "copyright": "Copyright © 2026 Nipunadhamma",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "about.html",
+      "privacy.html",
+      "terms.html",
+      "styles.css",
+      "converter.js",
+      "fmabhaya.js",
+      "manifest.webmanifest",
+      "sw.js",
+      "robots.txt",
+      "sitemap.xml",
+      "fonts/**/*",
+      "image/**/*"
+    ],
+    "asar": true,
+    "win": {
+      "icon": "image/logo-800x800.png",
+      "target": ["nsis", "portable"]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Nipunadhamma Singlish"
+    },
+    "portable": {
+      "artifactName": "Nipunadhamma-Singlish-Portable-${version}.exe"
+    },
+    "mac": {
+      "icon": "image/logo-800x800.png",
+      "category": "public.app-category.productivity",
+      "target": ["dmg", "zip"]
+    },
+    "linux": {
+      "icon": "image/logo-800x800.png",
+      "category": "Utility",
+      "target": ["AppImage"]
+    }
+  }
+}
