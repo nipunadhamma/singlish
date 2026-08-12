@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Singlish → සිංහල | නිපුණධම්ම Singlish Keyboard & Sinhala Fonts</title>
+<meta name="description" content="නිපුණධම්ම Singlish keyboard — Singlish එකෙන් Sinhala type කරන්න, අකුරු live preview කරලා ඕනම Sinhala font එකක් free download කරගන්න. Free online Singlish to Sinhala converter, legacy FM fonts bundle. බුද්ධ ධර්ම, ත්‍රිපිටකය, දහම් පොත්, ධර්ම දේශනා, පාලි ඩික්ෂනරිය.">
+<meta name="keywords" content="singlish, sinhala, singlish to sinhala, sinhala keyboard, sinhala font, sinhala fonts, sinhala converter, type sinhala online, සිංහල, සිංග්ලිස්, නිපුණධම්ම, nipunadhamma, tripitaka, pali dictionary">
+<meta name="author" content="Nipunadhamma">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://singlish.nipunadhamma.org/">
+<meta name="theme-color" content="#6e1f16">
+<link rel="icon" type="image/png" sizes="96x96" href="image/favicon-96x96.png">
+<link rel="apple-touch-icon" href="image/ios.png">
+<link rel="preload" as="image" href="image/hero.jpg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://singlish.nipunadhamma.org/">
+<meta property="og:title" content="Singlish → සිංහල | නිපුණධම්ම Singlish Keyboard & Sinhala Fonts">
+<meta property="og:description" content="Singlish එකෙන් Sinhala type කරලා live preview කරන්න — free online Singlish to Sinhala converter සහ Sinhala fonts bundle.">
+<meta property="og:image" content="https://singlish.nipunadhamma.org/image/hero.jpg">
+<meta property="og:site_name" content="Nipunadhamma Singlish">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Singlish → සිංහල | නිපුණධම්ම Singlish Keyboard">
+<meta name="twitter:description" content="Type Singlish, see Sinhala live — free online Singlish to Sinhala converter & Sinhala fonts.">
+<meta name="twitter:image" content="https://singlish.nipunadhamma.org/image/hero.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Nipunadhamma Singlish",
+  "alternateName": "Singlish → සිංහල",
+  "url": "https://singlish.nipunadhamma.org/",
+  "description": "Free online Singlish to Sinhala converter with live preview and downloadable Sinhala fonts.",
+  "inLanguage": "si",
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nipunadhamma",
+    "url": "https://nipunadhamma.org/"
+  }
+}
+</script>
+<style>
+  @font-face {
+    font-family: 'FMAbhaya';
+    src: url('fonts/FMAbhaya.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  :root {
+    --maroon: #6e1f16;
+    --maroon-d: #571a11;
+    --saffron: #e67e22;
+    --gold: #d4ac0d;
+    --cream: #fdf9f3;
+    --ink: #2c2117;
+    --muted: #75624f;
+    --line: #eadfd2;
+    --card: #ffffff;
+    --accent: #f6c453;
+    --shadow: 0 4px 14px rgba(110, 31, 22, .08);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: "Noto Sans Sinhala", "Iskoola Pota", "Nirmala UI", system-ui, sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  img { max-width: 100%; }
+  section { scroll-margin-top: 76px; }
+
+  /* ---------- Navbar ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 60;
+    background: rgba(253, 249, 243, .96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav-inner {
+    max-width: 1120px; margin: 0 auto;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 12px; padding: 10px 18px;
+  }
+  .brand {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none; color: var(--ink);
+  }
+  .brand img { width: 42px; height: 42px; border-radius: 10px; }
+  .brand-text { display: flex; flex-direction: column; line-height: 1.2; }
+  .brand-text strong { font-size: 18px; color: var(--maroon); }
+  .brand-text small { color: var(--muted); font-size: 11px; letter-spacing: 1.2px; text-transform: uppercase; }
+  .nav-links { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  .nav-links a {
+    text-decoration: none; color: var(--ink);
+    font-size: 14.5px; padding: 8px 13px; border-radius: 999px;
+    transition: background .15s, color .15s;
+    white-space: nowrap;
+  }
+  .nav-links a:hover { background: #f3e9dd; color: var(--maroon); }
+  .nav-links a.active { background: var(--maroon); color: #fff; font-weight: 600; }
+  .nav-toggle {
+    display: none; background: none; border: 1px solid var(--line);
+    border-radius: 10px; font-size: 22px; line-height: 1;
+    padding: 6px 12px; cursor: pointer; color: var(--maroon);
+  }
+  @media (max-width: 780px) {
+    .nav-toggle { display: block; }
+    .nav-links {
+      display: none;
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; align-items: stretch;
+      background: var(--cream); border-bottom: 1px solid var(--line);
+      padding: 10px 16px 16px; box-shadow: 0 10px 24px rgba(0, 0, 0, .1);
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a { border-radius: 10px; padding: 11px 14px; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    min-height: 76vh;
+    display: flex; align-items: center;
+    background-size: cover; background-position: center;
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(30, 12, 8, .62), rgba(30, 12, 8, .55) 55%, rgba(30, 12, 8, .88));
+  }
+  .hero-inner {
+    position: relative; z-index: 2;
+    max-width: 840px; margin: 0 auto;
+    text-align: center; color: #fff;
+    padding: 80px 20px;
+  }
+  .hero-logo {
+    width: 112px; height: 112px; border-radius: 24px;
+    border: 2px solid rgba(255, 255, 255, .4);
+    box-shadow: 0 12px 34px rgba(0, 0, 0, .4);
+    margin-bottom: 18px;
+  }
+  .hero-kicker {
+    margin: 0 0 8px; letter-spacing: 3.5px; text-transform: uppercase;
+    font-size: 13px; color: var(--accent); font-weight: 600;
+  }
+  .hero-inner h1 {
+    margin: 0; font-size: clamp(42px, 7vw, 68px); line-height: 1.08; letter-spacing: .5px;
+    text-shadow: 0 3px 18px rgba(0, 0, 0, .35);
+  }
+  .hero-inner h1 .en {
+    display: block; font-size: .42em; letter-spacing: 6px;
+    color: var(--accent); text-transform: uppercase; margin-top: 6px;
+  }
+  .hero-sub {
+    margin: 18px auto 30px; max-width: 640px;
+    font-size: 17px; line-height: 1.75; opacity: .94;
+  }
+  .hero-cta { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; text-decoration: none;
+    padding: 13px 28px; border-radius: 999px;
+    font-size: 15.5px; font-weight: 700; letter-spacing: .3px;
+    transition: transform .15s, box-shadow .15s, background .15s;
+    border: 2px solid transparent;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-gold {
+    background: linear-gradient(135deg, var(--saffron), var(--gold));
+    color: #fff; box-shadow: 0 10px 26px rgba(212, 172, 13, .35);
+  }
+  .btn-gold:hover { box-shadow: 0 14px 32px rgba(212, 172, 13, .45); }
+  .btn-ghost { border-color: rgba(255, 255, 255, .75); color: #fff; }
+  .btn-ghost:hover { background: rgba(255, 255, 255, .14); }
+
+  /* ---------- Feature strip ---------- */
+  .strip { background: var(--cream); border-bottom: 1px solid var(--line); }
+  .strip-inner {
+    max-width: 1120px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px; padding: 24px 18px;
+  }
+  .strip-item {
+    display: flex; flex-direction: column; align-items: center;
+    text-align: center; gap: 2px;
+  }
+  .strip-item span { font-size: 28px; }
+  .strip-item b { font-size: 15.5px; color: var(--maroon); }
+  .strip-item small { color: var(--muted); font-size: 12.5px; }
+
+  /* ---------- Converter ---------- */
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 42px 16px 12px; }
+  .panes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 720px) { .panes { grid-template-columns: 1fr; } }
+  .pane {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .pane-label {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 11px 15px;
+    font-weight: 600; font-size: 14px;
+    color: var(--muted);
+    border-bottom: 1px solid var(--line);
+    background: #faf6ef;
+  }
+  .pane-label .badge {
+    font-size: 12px; padding: 2px 9px; border-radius: 10px;
+    background: #fbe7c6; color: var(--maroon);
+  }
+  .pane-label .right { display: flex; align-items: center; gap: 8px; }
+  select {
+    font-family: inherit; font-size: 13px; padding: 5px 9px;
+    border: 1px solid var(--line); border-radius: 9px;
+    background: #fff; color: var(--ink); cursor: pointer;
+  }
+  .download {
+    display: inline-block; font-family: inherit; font-size: 14px;
+    padding: 7px 14px; border: 1px solid var(--line); border-radius: 9px;
+    background: #fff; color: var(--ink); cursor: pointer;
+    text-decoration: none; transition: all .15s;
+  }
+  .download:hover { background: var(--maroon); color: #fff; border-color: var(--maroon); }
+  textarea {
+    width: 100%; height: 250px; padding: 15px;
+    border: none; outline: none; resize: none;
+    font-family: inherit; font-size: 22px; line-height: 1.7;
+    background: transparent; color: var(--ink);
+  }
+  .pane-output textarea { font-size: 24px; color: #8b0000; font-weight: 600; }
+  .toolbar {
+    display: flex; gap: 8px; padding: 10px 14px;
+    border-top: 1px solid var(--line); background: #faf6ef;
+    flex-wrap: wrap;
+  }
+  button {
+    font-family: inherit; font-size: 14px; padding: 7px 14px;
+    border: 1px solid var(--line); border-radius: 9px;
+    background: #fff; color: var(--ink); cursor: pointer;
+    transition: all .15s;
+  }
+  button:hover { background: var(--maroon); color: #fff; border-color: var(--maroon); }
+  button.primary { background: var(--maroon); color: #fff; border-color: var(--maroon); }
+  button.primary:hover { background: var(--maroon-d); }
+  button:disabled { opacity: .5; cursor: not-allowed; }
+  .samples { margin-top: 16px; display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .samples span { font-size: 13px; color: var(--muted); }
+  .hint {
+    margin-top: 20px; background: #fdf6e3;
+    border: 1px solid #f5e6b8; border-radius: 14px;
+    padding: 15px 17px; font-size: 14px; color: #7d6608;
+  }
+  .hint b { color: var(--maroon-d); }
+  details.help {
+    margin-top: 20px; background: var(--card);
+    border: 1px solid var(--line); border-radius: 14px; overflow: hidden;
+  }
+  details.help summary {
+    cursor: pointer; padding: 15px 17px; font-weight: 600;
+    color: var(--muted); background: #faf6ef; user-select: none;
+  }
+  details.help summary:hover { color: var(--maroon); }
+  .help-body { padding: 15px 17px; }
+  .help-body h4 { margin: 16px 0 7px; font-size: 15px; color: var(--maroon-d); }
+  .help-body h4:first-child { margin-top: 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  th, td { padding: 5px 8px; text-align: left; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; }
+  td.si { font-size: 18px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 4px 14px; }
+  .count { font-size: 12px; color: var(--muted); padding: 0 14px 8px; }
+
+  /* ---------- Portal ---------- */
+  .portal {
+    background: linear-gradient(180deg, #fff8ee, #fcf0df);
+    border-top: 1px solid var(--line);
+    padding: 58px 16px;
+  }
+  .section-title { text-align: center; margin: 0 0 30px; font-size: 28px; color: var(--maroon); }
+  .section-title span {
+    display: block; font-size: 13px; letter-spacing: 2.5px;
+    text-transform: uppercase; color: var(--muted); margin-top: 2px;
+  }
+  .portal-grid {
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: 16px;
+  }
+  .card {
+    position: relative;
+    display: flex; flex-direction: column; align-items: center; gap: 5px;
+    text-decoration: none; color: var(--ink);
+    background: #fff; border: 1px solid var(--line); border-radius: 18px;
+    padding: 24px 16px 20px; text-align: center;
+    box-shadow: var(--shadow); transition: transform .18s, box-shadow .18s, border-color .18s;
+  }
+  .card:hover { transform: translateY(-5px); box-shadow: 0 16px 34px rgba(110, 31, 22, .16); border-color: #e6cfae; }
+  .card-ico { font-size: 36px; }
+  .card h3 { margin: 6px 0 0; font-size: 17px; color: var(--maroon); }
+  .card p { margin: 0; color: var(--muted); font-size: 13px; }
+  .card-btn {
+    margin-top: 12px; display: inline-block;
+    background: linear-gradient(135deg, var(--saffron), var(--gold));
+    color: #fff; font-weight: 700; font-size: 13.5px;
+    padding: 9px 18px; border-radius: 999px;
+    box-shadow: 0 6px 16px rgba(212, 172, 13, .3);
+  }
+  .card.current { border: 2px solid var(--gold); background: #fffdf6; }
+  .card .tag {
+    position: absolute; top: -11px; left: 50%; transform: translateX(-50%);
+    background: var(--maroon); color: #fff; font-size: 11.5px; font-weight: 700;
+    padding: 3px 12px; border-radius: 999px; white-space: nowrap;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, .18);
+  }
+
+  /* ---------- Footer ---------- */
+  .footer { background: #4a120c; color: #f3e7d8; }
+  .footer-inner {
+    max-width: 1120px; margin: 0 auto; padding: 46px 18px 0;
+    display: flex; flex-direction: column; align-items: center; gap: 26px; text-align: center;
+  }
+  .f-brand { display: flex; align-items: center; gap: 14px; }
+  .f-brand img { width: 58px; height: 58px; border-radius: 15px; }
+  .f-brand strong { font-size: 23px; display: block; line-height: 1.2; }
+  .f-brand span { font-size: 12.5px; color: #e2cbaa; letter-spacing: 1.5px; text-transform: uppercase; }
+  .f-links { display: flex; gap: 8px 20px; flex-wrap: wrap; justify-content: center; }
+  .f-links a { color: #f3e7d8; text-decoration: none; font-size: 14.5px; padding: 4px 9px; border-radius: 8px; transition: color .15s; }
+  .f-links a:hover { color: var(--accent); }
+  .f-copy {
+    margin: 0; width: 100%; font-size: 13px; color: #d9c3a4;
+    border-top: 1px solid rgba(255, 255, 255, .14); padding: 18px 0 22px;
+  }
+  .f-copy a { color: var(--accent); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="https://singlish.nipunadhamma.org/" aria-label="නිපුණධම්ම Singlish — home">
+      <img src="image/app-logo.png" alt="නිපුණධම්ම Singlish logo" width="42" height="42">
+      <span class="brand-text"><strong>නිපුණධම්ම</strong><small>Singlish · සිංහල</small></span>
+    </a>
+    <button id="navToggle" class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+    <nav id="navLinks" class="nav-links" aria-label="Main navigation">
+      <a href="https://tripitaka.suththa.org">ත්‍රිපිටකය</a>
+      <a href="https://suththa.org">දහම් පොත්</a>
+      <a href="https://nipunadhamma.org">ධර්ම දේශනා</a>
+      <a href="https://dictionary.suththa.org">පාලි ඩික්ෂනරිය</a>
+      <a href="https://singlish.nipunadhamma.org/" class="active" aria-current="page">සිංග්ලිස්</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" style="background-image:url('image/hero.jpg')">
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <img class="hero-logo" src="image/app-logo.png" alt="නිපුණධම්ම logo" width="112" height="112">
+      <p class="hero-kicker">Singlish &amp; Sinhala Font</p>
+      <h1>නිපුණධම්ම<span class="en">Nipunadhamma</span></h1>
+      <p class="hero-sub">
+        Singlish ටයිප් කරන්න — සිංහල අකුරු live එකේ බලන්න. Unicode සහ legacy FM Sinhala fonts
+        16+ ක් preview කරලා, ඕනම font එකක් free download කරගන්න.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-gold" href="#converter">⌨️ Singlish ටයිප් කරන්න</a>
+        <a class="btn btn-ghost" href="https://nipunadhamma.org" target="_blank" rel="noopener">🧘 ධර්ම දේශනා</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip" aria-label="විශේෂාංග">
+    <div class="strip-inner">
+      <div class="strip-item"><span>⚡</span><b>Live Preview</b><small>ටයිප් කරන ගමන් අකුරු පේනවා</small></div>
+      <div class="strip-item"><span>🔤</span><b>16+ Sinhala Fonts</b><small>Legacy FM fonts bundle වෙලා</small></div>
+      <div class="strip-item"><span>⬇</span><b>Free Download</b><small>ඕනම font එකක් බාගන්න</small></div>
+    </div>
+  </section>
+
+  <section class="wrap" id="converter">
+    <div class="panes">
+      <div class="pane">
+        <div class="pane-label"><span>Singlish</span><span class="badge">Input</span></div>
+        <textarea id="input" placeholder="Singlish ටයිප් කරන්න...&#10;&#10;example: mage nama nuwan.&#10;=&gt; මගෙ නම නුවන්." spellcheck="false"></textarea>
+        <div class="toolbar">
+          <button id="clear" class="primary">Clear</button>
+          <button id="sample1">ආයුබෝවන්</button>
+          <button id="sample2">කොහොමද</button>
+          <button id="sample3">ස්තූතියි</button>
+        </div>
+      </div>
+
+      <div class="pane pane-output">
+        <div class="pane-label">
+          <span>සිංහල</span>
+          <span class="right">
+            <select id="fontSel" title="Output font / encoding mode">
+              <option value="unicode">Unicode</option>
+              <option value="custom">Custom font…</option>
+            </select>
+            <span class="badge" id="liveBadge">FM Abhaya</span>
+          </span>
+        </div>
+        <textarea id="output" readonly placeholder="සිංහල අකුරු මෙතැන පේවි..."></textarea>
+        <div class="toolbar">
+          <button id="copy">Copy සිංහල</button>
+          <button id="swap">← Swap</button>
+          <a class="download" id="dlFont" download href="fonts/FMAbhaya.ttf">⬇ FM Abhaya font</a>
+          <label class="download" for="fontFile" title="Load any .ttf/.otf font file to preview">Font file…</label>
+          <input type="file" id="fontFile" accept=".ttf,.otf" hidden>
+        </div>
+      </div>
+    </div>
+
+    <div class="samples">
+      <span>උදාහරණ:</span>
+      <button data-sample="mee shrii gauthama budhDha raajyayayi">mee shrii gauthama budhDha raajyayayi</button>
+      <button data-sample="praGhaawa uthumma Dhanayayi">praGhaawa uthumma Dhanayayi</button>
+      <button data-sample="magee nama nipuNadhhamma">magee nama nipuNadhhamma</button>
+    </div>
+
+    <div class="count" id="count"></div>
+
+    <div class="hint">
+      <b>Tip:</b> ස්වර: <code>a=අ aa=ආ A=ඇ Aa/AA=ඈ i=ඉ ii=ඊ u=උ uu=ඌ</code> · <code>e=එ ee=ඒ ai=ඓ o=ඔ oo=ඕ au=ඖ</code> · <code>R=ඍ Ru=ඎ</code> · මහප්‍රාණ: <code>kha=ඛ gha=ඝ chha=ඡ jha=ඣ thha=ථ dhha/Dha=ධ pha=ඵ bha=භ</code> · <code>th=ත dh=ද sha=ශ Sa=ෂ</code> · සඤ්ඤක: <code>zga/Gga=ඟ zda/Gda=ඬ zdha/Gdha=ඳ zka/Gka=ඤ zha/Gha=ඥ Ba=ඹ</code> · <code>kaH=කඃ kax=කං kaX=කඞ</code> · <code>kra=ක්‍ර kya=ක්‍ය</code> · බුද්ධ = <code>budhdhha</code><br>
+      <b>Font:</b> output එකේ dropdown එකෙන් legacy FM font එකක් තෝරාගත්තොත් output එක ඒ font එකේ legacy encoding එකට පෙරලිලා ඒ font එකෙන්ම පේනවා (Word එකේ ඒ font එකෙන් පාවිච්චි කරන්න පුළුවන්). සියලුම fonts මේ project එකට bundle වෙලා (@font-face) — ඕන කෙනෙක්ට browser එකේම preview කරන්න පුළුවන්, <b>"⬇ ... font"</b> button එකෙන් <b>දැන් selected කරලා තියෙන font එක</b> download කරගන්නත් පුළුවන්. <code>Unicode</code> mode එකේ output එක හැමදාම standard Unicode — ඕනම font එකකින් හරියට පේනවා. "Font file…" button එකෙන් ඕනම <code>.ttf/.otf</code> font file එකක් load කරලා preview කරන්නත් පුළුවන්.
+    </div>
+
+    <details class="help">
+      <summary>කීබෝඩ් මැප් එක (Keyboard map)</summary>
+      <div class="help-body">
+        <h4>ස්වර / Vowels</h4>
+        <div class="grid">
+          <table><tr><th>Singlish</th><th>සිංහල</th></tr>
+            <tr><td>a / aa</td><td class="si">අ / ආ</td></tr>
+            <tr><td>A / Aa (AA)</td><td class="si">ඇ / ඈ</td></tr>
+            <tr><td>i / ii</td><td class="si">ඉ / ඊ</td></tr>
+            <tr><td>u / uu</td><td class="si">උ / ඌ</td></tr>
+            <tr><td>R / Ru</td><td class="si">ඍ / ඎ</td></tr>
+            <tr><td>ai</td><td class="si">ඓ</td></tr>
+            <tr><td>au / ou</td><td class="si">ඖ</td></tr>
+            <tr><td>e / ee</td><td class="si">එ / ඒ</td></tr>
+            <tr><td>o / oo</td><td class="si">ඔ / ඕ</td></tr>
+          </table>
+          <table><tr><th>පදයක් මැදදී</th><th>සිංහල</th></tr>
+            <tr><td>ka / kaa</td><td class="si">ක / කා</td></tr>
+            <tr><td>kA / kAa (kAA)</td><td class="si">කැ / කෑ</td></tr>
+            <tr><td>ki / kii</td><td class="si">කි / කී</td></tr>
+            <tr><td>ku / kuu</td><td class="si">කු / කූ</td></tr>
+            <tr><td>ke / kee</td><td class="si">කෙ / කේ</td></tr>
+            <tr><td>ko / koo</td><td class="si">කො / කෝ</td></tr>
+            <tr><td>kai / kau</td><td class="si">කෛ / කෞ</td></tr>
+            <tr><td>kru / kruu</td><td class="si">කෘ / කෲ</td></tr>
+            <tr><td>kya / kra</td><td class="si">ක්‍ය / ක්‍ර</td></tr>
+            <tr><td>kaH / kax / kaX</td><td class="si">කඃ / කං / කඞ</td></tr>
+            <tr><td>x</td><td class="si">ං — උදා: sixhala = සිංහල</td></tr>
+          </table>
+        </div>
+
+        <h4>ව්‍යංජන / Consonants</h4>
+        <table>
+          <tr><th>Singlish</th><th class="si">ක</th><th class="si">ඛ</th><th class="si">ග</th><th class="si">ඝ</th><th class="si">ච</th><th class="si">ඡ</th><th class="si">ජ</th><th class="si">ඣ</th></tr>
+          <tr><td></td><td>ka</td><td>kha</td><td>ga</td><td>gha</td><td>cha</td><td>chha</td><td>ja</td><td>jha</td></tr>
+          <tr><th>Singlish</th><th class="si">ට</th><th class="si">ඨ</th><th class="si">ඩ</th><th class="si">ඪ</th><th class="si">ත</th><th class="si">ථ</th><th class="si">ද</th><th class="si">ධ</th></tr>
+          <tr><td></td><td>ta</td><td>Ta</td><td>da</td><td>Da</td><td>tha</td><td>thha</td><td>dha / qa</td><td>dhha / Dha</td></tr>
+          <tr><th>Singlish</th><th class="si">න</th><th class="si">ණ</th><th class="si">ප</th><th class="si">ඵ</th><th class="si">බ</th><th class="si">භ</th><th class="si">ම</th><th class="si">ස</th></tr>
+          <tr><td></td><td>na</td><td>Na</td><td>pa</td><td>pha</td><td>ba</td><td>bha</td><td>ma</td><td>sa</td></tr>
+          <tr><th>Singlish</th><th class="si">ශ</th><th class="si">ෂ</th><th class="si">හ</th><th class="si">ය</th><th class="si">ර</th><th class="si">ල</th><th class="si">ළ</th><th class="si">ව</th></tr>
+          <tr><td></td><td>sha</td><td>Sa / Sha</td><td>ha</td><td>ya</td><td>ra</td><td>la</td><td>La</td><td>wa / va</td></tr>
+          <tr><th>Singlish</th><th class="si">ෆ</th><th class="si">ඟ</th><th class="si">ඬ</th><th class="si">ඳ</th><th class="si">ඤ</th><th class="si">ඥ</th><th class="si">ඦ</th><th class="si">ඹ</th></tr>
+          <tr><td></td><td>fa</td><td>zga / Gga</td><td>zda / Gda</td><td>zdha (zqa) / Gdha (Gqa)</td><td>zka / Gka</td><td>zha / Gha</td><td>zja / Gja</td><td>Ba</td></tr>
+          <tr><th>Singlish</th><th class="si">ඞ</th><th class="si">ං</th><th class="si">ඃ</th><th class="si">ළු</th></tr>
+          <tr><td></td><td>kaX</td><td>kax / kazn</td><td>kaH</td><td>Lu</td></tr>
+        </table>
+
+        <h4>සංයුක්ත අකුරු / Ligatures</h4>
+        <table>
+          <tr><th>Singlish</th><th class="si">ර්‍ර</th><th class="si">ර්‍ය</th><th class="si">ය්‍ය</th><th class="si">ක්‍ර</th><th class="si">ක්‍ය</th></tr>
+          <tr><td></td><td>rra</td><td>rya</td><td>yya</td><td>kra</td><td>kya</td></tr>
+        </table>
+        <p style="margin-top:12px;color:var(--muted);font-size:13px">
+          සෑම ව්‍යංජනයක්ම වචනයක් අවසානයේදී "්" (hal) සමඟ පේනවා — උදා: <b>k</b> = ක්, <b>mama</b> = මම, <b>pasal</b> = පසල්.
+        </p>
+      </div>
+    </details>
+  </section>
+
+  <section class="portal" aria-label="අපේ වෙබ් අඩවි">
+    <div class="section-title">අපේ වෙබ් අඩවි<span>Our Websites</span></div>
+    <div class="portal-grid">
+      <a class="card" href="https://tripitaka.suththa.org">
+        <span class="card-ico" aria-hidden="true">📖</span>
+        <h3>ත්‍රිපිටකය</h3>
+        <p>Tipitaka</p>
+        <span class="card-btn">විවෘත කරන්න →</span>
+      </a>
+      <a class="card" href="https://suththa.org">
+        <span class="card-ico" aria-hidden="true">📚</span>
+        <h3>දහම් පොත්</h3>
+        <p>Suththa Books</p>
+        <span class="card-btn">විවෘත කරන්න →</span>
+      </a>
+      <a class="card" href="https://nipunadhamma.org">
+        <span class="card-ico" aria-hidden="true">🧘</span>
+        <h3>ධර්ම දේශනා</h3>
+        <p>Dharma Talks</p>
+        <span class="card-btn">විවෘත කරන්න →</span>
+      </a>
+      <a class="card" href="https://dictionary.suththa.org">
+        <span class="card-ico" aria-hidden="true">📕</span>
+        <h3>පාලි ඩික්ෂනරිය</h3>
+        <p>Pali Dictionary</p>
+        <span class="card-btn">විවෘත කරන්න →</span>
+      </a>
+      <a class="card current" href="https://singlish.nipunadhamma.org/">
+        <span class="tag">ඔබ මෙතන</span>
+        <span class="card-ico" aria-hidden="true">⌨️</span>
+        <h3>සිංග්ලිස්</h3>
+        <p>Singlish Keyboard</p>
+        <span class="card-btn">කීබෝඩ් එක පාවිච්චි කරන්න →</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="f-brand">
+      <img src="image/app-logo.png" alt="නිපුණධම්ම logo" width="58" height="58">
+      <div>
+        <strong>නිපුණධම්ම</strong>
+        <span>Singlish &amp; Sinhala Font</span>
+      </div>
+    </div>
+    <nav class="f-links" aria-label="Footer navigation">
+      <a href="https://tripitaka.suththa.org">ත්‍රිපිටකය</a>
+      <a href="https://suththa.org">දහම් පොත්</a>
+      <a href="https://nipunadhamma.org">ධර්ම දේශනා</a>
+      <a href="https://dictionary.suththa.org">පාලි ඩික්ෂනරිය</a>
+      <a href="https://singlish.nipunadhamma.org/">සිංග්ලිස්</a>
+    </nav>
+    <p class="f-copy">© <span id="year"></span> Nipunadhamma · <a href="https://singlish.nipunadhamma.org/">singlish.nipunadhamma.org</a></p>
+  </div>
+</footer>
+
+<script src="converter.js"></script>
+<script src="fmabhaya.js"></script>
+<script>
+  (function () {
+    var navToggle = document.getElementById('navToggle');
+    var navLinks = document.getElementById('navLinks');
+    if (navToggle && navLinks) {
+      navToggle.addEventListener('click', function () {
+        var open = navLinks.classList.toggle('open');
+        navToggle.classList.toggle('active', open);
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      navLinks.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') {
+          navLinks.classList.remove('open');
+          navToggle.classList.remove('active');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    }
+    var year = document.getElementById('year');
+    if (year) year.textContent = new Date().getFullYear();
+
+    var input = document.getElementById('input');
+    var output = document.getElementById('output');
+    var count = document.getElementById('count');
+    var fontSel = document.getElementById('fontSel');
+    var badge = document.getElementById('liveBadge');
+
+    var CUSTOM_FAMILY = 'CustomFont';
+    var customLoaded = false;
+    var dlFont = document.getElementById('dlFont');
+
+    var FONTS = {
+      'FMAbhaya': 'FMAbhaya.ttf',
+      'FMBindumathi': 'FMBindumathi.ttf',
+      'FMEmanee': 'FMEmanee.ttf',
+      'FMGanganee': 'FMGanganee.ttf',
+      'FMGemunu': 'FMGemunu.ttf',
+      'FMMalithi': 'FMMalithi.ttf',
+      'FMArjunn': 'FMArjunn.ttf',
+      '4u-Ajantha': '4uAjantha.ttf',
+      '4u-Anurada': '4uAnurada.ttf',
+      '4u-Araliya.': '4uAraliya.ttf',
+      'DL-Manel..': 'DLManel.ttf',
+      '0KDMANEL': '0KDMANEL.ttf',
+      'CCMottaTypeOne': 'CCMottaTypeOne.ttf',
+      'CPW_Arana': 'cpw_arana.ttf',
+      'THARU DIGITAL NIKINI': 'TharuDigitalNikini.ttf',
+      'THARU DIGITAL MAHEE': 'tharu_digital_mahee.ttf'
+    };
+
+    Object.keys(FONTS).forEach(function (fam, i) {
+      var o = document.createElement('option');
+      o.value = fam;
+      o.textContent = fam;
+      fontSel.appendChild(o);
+      var ff = new FontFace(fam, 'url(fonts/' + FONTS[fam] + ')');
+      ff.load().then(function () {
+        document.fonts.add(ff);
+      })['catch'](function () {});
+    });
+
+    function fontFamilyFor(v) {
+      if (v === 'unicode' || v === 'custom') return '';
+      return "'" + v + "', 'FMAbhaya', 'Noto Sans Sinhala', sans-serif";
+    }
+
+    function updateDl() {
+      var v = fontSel.value;
+      if (FONTS[v]) {
+        dlFont.href = 'fonts/' + FONTS[v];
+        dlFont.setAttribute('download', FONTS[v]);
+        dlFont.textContent = '⬇ ' + v + ' font';
+        dlFont.style.display = '';
+      } else {
+        dlFont.style.display = 'none';
+      }
+    }
+
+    function update() {
+      var v = fontSel.value;
+      var si = SinglishConverter.convert(input.value);
+      var isFM = v !== 'unicode' && v !== 'custom';
+      output.value = isFM ? FMAbhaya.unicodeToFMAbhaya(si) : si;
+      output.style.fontFamily = fontFamilyFor(v);
+      if (isFM) badge.textContent = v;
+      else if (v === 'custom') badge.textContent = customLoaded ? 'Custom' : 'Custom (font?)';
+      else badge.textContent = 'Unicode';
+      updateDl();
+      var chars = 0;
+      for (var i = 0; i < output.value.length; i++) chars++;
+      count.textContent = 'Singlish chars: ' + input.value.length + '  ·  Output chars: ' + chars;
+    }
+
+    input.addEventListener('input', update);
+
+    fontSel.addEventListener('change', function () {
+      try { localStorage.setItem('fmFontSel', fontSel.value); } catch (e) {}
+      update();
+    });
+
+    document.getElementById('fontFile').addEventListener('change', function () {
+      var file = this.files && this.files[0];
+      this.value = '';
+      if (!file) return;
+      var fr = new FileReader();
+      fr.onload = function () {
+        var ff = new FontFace(CUSTOM_FAMILY, fr.result);
+        ff.load().then(function () {
+          document.fonts.add(ff);
+          customLoaded = true;
+          fontSel.value = 'custom';
+          try { localStorage.setItem('fmFontSel', 'custom'); } catch (e) {}
+          update();
+        })['catch'](function () { alert('Font file load failed — invalid or unsupported font.'); });
+      };
+      fr.readAsArrayBuffer(file);
+    });
+
+    try {
+      var saved = localStorage.getItem('fmFontSel');
+      if (saved && document.querySelector('#fontSel option[value="' + saved + '"]')) fontSel.value = saved;
+      else fontSel.value = 'FMAbhaya';
+    } catch (e) { fontSel.value = 'FMAbhaya'; }
+
+    update();
+
+    document.getElementById('clear').addEventListener('click', function () {
+      input.value = '';
+      update();
+      input.focus();
+    });
+
+    document.getElementById('copy').addEventListener('click', function () {
+      if (!output.value) return;
+      output.select();
+      try {
+        navigator.clipboard.writeText(output.value).then(function () {
+          var b = document.getElementById('copy');
+          b.textContent = 'Copied!';
+          setTimeout(function () { b.textContent = 'Copy සිංහල'; }, 1200);
+        });
+      } catch (e) {
+        document.execCommand('copy');
+      }
+    });
+
+    document.getElementById('swap').addEventListener('click', function () {
+      var t = input.value;
+      input.value = output.value;
+      output.value = t;
+      update();
+      input.focus();
+    });
+
+    var samples = {
+      sample1: 'aayuboowan',
+      sample2: 'kohomadha',
+      sample3: 'sthuuthiyi'
+    };
+    document.getElementById('sample1').addEventListener('click', function () { input.value = samples.sample1; update(); });
+    document.getElementById('sample2').addEventListener('click', function () { input.value = samples.sample2; update(); });
+    document.getElementById('sample3').addEventListener('click', function () { input.value = samples.sample3; update(); });
+
+    document.querySelectorAll('[data-sample]').forEach(function (btn) {
+      btn.addEventListener('click', function () { input.value = btn.dataset.sample; update(); });
+    });
+
+    update();
+  })();
+</script>
+</body>
+</html>
